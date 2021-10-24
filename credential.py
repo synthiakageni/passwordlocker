@@ -54,4 +54,8 @@ class Credential:
         '''
         method to display all saved credentials
         '''        
-        return cls.credentials_list                  
+        return cls.credentials_list    
+    @classmethod
+    def copy_password(cls, account):
+      my_credential = Credential.find_credential(account)
+      pyperclip.copy(my_credential.password)                 
