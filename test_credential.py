@@ -10,4 +10,9 @@ class TestCredential(unittest.TestCase):
         method to run before each test case 
         '''
         self.new_credential = Credential("Twitter", "kageni", "kagenikageni")
+    def tearDown(self):
+        '''
+        cleans up after each testcase has run
+        '''
+        Credential.credentials_list = []
         
