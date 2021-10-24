@@ -17,3 +17,9 @@ def save_user(self):
         '''
         method that saves a new instance of a user into the list
         '''
+        User.users_list.append(self)
+def delete_user(self):
+        '''
+        method for deleting a saved user from the users list
+        '''
+        User.users_list.remove(self)    
