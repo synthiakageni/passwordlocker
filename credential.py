@@ -33,3 +33,11 @@ class Credential:
         method for deleting a credential from the list
         '''
         Credential.credentials_list.remove(self)
+    @classmethod
+    def find_by_account(cls, account):
+        '''
+        method to search credentials by account
+        '''
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
