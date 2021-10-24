@@ -33,4 +33,10 @@ def authenticate_user(cls, username, password):
         for user in User.users_list:
             if (user.username == username and user.password == password):
                 firstuser == user.username
-        return firstuser      
+        return firstuser 
+def generate_password(length):
+    # choose from all lowercase letter
+        letters = string.ascii_lowercase
+        result_str = ''.join(random.choice(letters) for i in range(length))
+        print( result_str)
+        return result_str  
