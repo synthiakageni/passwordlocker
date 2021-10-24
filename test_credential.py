@@ -20,7 +20,14 @@ class TestCredential(unittest.TestCase):
         test proper initialization
         ''' 
         self.assertEqual(self.new_credential.account,"Twitter")
-        self.assertEqual(self.new_credential.userName,"mumo")
-        self.assertEqual(self.new_credential.passWord,"klmnopqrstuv")  
+        self.assertEqual(self.new_credential.userName,"kageni")
+        self.assertEqual(self.new_credential.passWord,"kagenikageni") 
+    def test_save_credential(self):
+        '''
+        method to test whether new instances are being saved 
+        '''   
+        self.new_credential.save_credential()
+        self.assertEqual(len(Credential.credentials_list),1)
+        
         
         
