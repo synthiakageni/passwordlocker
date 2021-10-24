@@ -4,3 +4,4 @@ class Credential:
     '''
     the blueprint for creating new objects for credentials
     '''
+    credentials_list = []
