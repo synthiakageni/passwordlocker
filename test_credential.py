@@ -69,7 +69,12 @@ class TestCredential(unittest.TestCase):
         my_credential = Credential.find_credential("Twitter")
 
         self.assertEqual(my_credential.account,test_credential.account)
-            
+    def test_display_credentials(self):
+        '''
+        method to return all saved credentials
+        '''    
+        self.assertEqual(Credential.display_credentials(), Credential.credentials_list)
+               
         
         
         
