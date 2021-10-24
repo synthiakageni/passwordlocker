@@ -20,3 +20,12 @@ class TestUser(unittest.TestCase):
         cleans up after each testcase has run
         '''
         User.users_list = []
+    def test_init(self):
+            '''
+            test init test case to test if the object is initialized properly
+            '''    
+            self.assertEqual(self.new_user.username,"kageni")
+            self.assertEqual(self.new_user.password,"kagenikageni")
+if __name__ == '__main__':
+    unittest.main()    
+              
