@@ -15,4 +15,12 @@ class TestCredential(unittest.TestCase):
         cleans up after each testcase has run
         '''
         Credential.credentials_list = []
+    def test_init(self):
+        '''
+        test proper initialization
+        ''' 
+        self.assertEqual(self.new_credential.account,"Twitter")
+        self.assertEqual(self.new_credential.userName,"mumo")
+        self.assertEqual(self.new_credential.passWord,"klmnopqrstuv")  
+        
         
