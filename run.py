@@ -1,5 +1,6 @@
 from credential import Credential
 from user import User
+
 def create_new_user(username, password):
     '''
     Function that creates a user
@@ -180,5 +181,6 @@ def main():
                              print("Wrong entry... Check your entry again and let it match those in the menu")
                     else:
                         print("Please enter a valid input to continue")    
+                                
 if __name__ == '__main__':
-    main()                                   
+    main()    
