@@ -13,3 +13,7 @@ def __init__(self, username, password):
 
         self.username = username
         self.password = password
+def save_user(self):
+        '''
+        method that saves a new instance of a user into the list
+        '''
