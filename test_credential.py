@@ -33,9 +33,21 @@ class TestCredential(unittest.TestCase):
         test case for checking the ability to save multiple credentials
         '''
         self.new_credential.save_credential()
-        test_credential = Credential("Twitter", "mumo", "klmnopqrstuv")
+        test_credential = Credential("Twitter", "kageni", "kagenikageni")
         test_credential.save_credential()
         self.assertEqual(len(Credential.credentials_list),2)
+    def test_delete_credential(self):
+        '''
+        test if we can remove a credential from our list
+        '''  
+        self.new_credential.save_credential()
+        test_credential =  self.new_credential = Credential("Twitter", "mumo", "klmnopqrstuv")
+        test_credential.save_credential()
+        
+        self.new_credential.delete_credential()
+        
+        self.assertEqual(len(Credential.credentials_list),1)
+        
         
         
         
