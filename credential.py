@@ -41,3 +41,11 @@ class Credential:
         for credential in cls.credentials_list:
             if credential.account == account:
                 return credential
+    @classmethod
+    def find_credential(cls, account):
+        '''
+        method to check if credential exists
+        '''
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential        
